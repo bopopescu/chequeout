@@ -1,0 +1,22 @@
+{% extends 'chat/layout.html' %}
+
+{% block content%}
+    <div class="jumbotron mb-5 mt-5 bg-info">
+
+    </div>
+    <div class="container pt-5 mt-5 mb-5 pb-5" style="overflow: scroll">
+        <form action='./dialog/' method='POST' id="submit-form">
+            {% csrf_token %}
+            <div class='form-group row'>
+                <input class="form-control" id="name" class='col' type="text" name="message" value="" placeholder="Tell me what you want to buy">
+                <input class="mt-2 form-control btn btn-primary" onclick="addMessage()" class='col' type="submit" name="button">
+            </div>
+        </form>
+    </div>
+    <div class="jumbotron mt-5 bg-info">
+
+    </div>
+    {% load static %}
+    {% static "chat/index.js" as file %}
+    <script type="text/javascript" src="{{file}}"></script>
+{% endblock %}

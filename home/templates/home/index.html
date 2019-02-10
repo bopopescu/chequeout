@@ -1,0 +1,48 @@
+{% extends 'home/layout.html' %}
+{% block content %}
+
+<div class="jumbotron alert-warning">
+    <div class="container d-flex justify-content-center">
+        <h1 class="display-4 ">Chequeout</h1>
+    </div>
+    <div class="container d-flex justify-content-center">
+        <p class="lead">A super fast way to buy things securely</p>
+    </div>
+    <hr class="my-4">
+    <div class="container d-flex justify-content-center">
+        <p>Made for hustlers. Buff as a muscler</p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="card col" style="width: 25rem;">
+            <img class="card-img-top" src="data:image/png;base64,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" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Meet Rebecca</h5>
+                <p class="card-text">Rebecca is your assistant. Just tell her what you want, just like you would to any human. Then watch her weave her magic!</p>
+            </div>
+        </div>
+        <div class="card col ml-5" style="width: 25rem;">
+            <img class="card-img-top" src="https://static.thenounproject.com/png/3879-200.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">All you have to do is chequeout</h5>
+                <p class="card-text">Rebecca will process your request and will display cards for each item, with their price and external links. To buy those items just hit the green button!</p>
+            </div>
+        </div>
+        <div class="card col ml-5" style="width: 25rem;">
+            <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhlpqVWJplsoXRZ8iSpskj-ie1n-kqWEp8HRG7jhlok5Mo3WlWLg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Secure payments. Always</h5>
+                <p class="card-text">We use blockchain to process your payments. Centralization has been replaced by decentralization. Blockchain is super secure. Period.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="jumbotron bg-danger mt-5 mb-0">
+    <div class="container d-flex justify-content-center">
+        <h1 class="text-white">Made with ☕ by 1ntEgr8</h1>
+    </div>
+</div>
+{% endblock %}

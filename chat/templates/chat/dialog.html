@@ -1,0 +1,33 @@
+{% extends 'chat/layout.html' %}
+{% block content %}
+<div class="jumbotron">
+    <div class="container d-flex justify-content-center">
+        <h1 class="display-4 ">{{message}}</h1>
+    </div>
+</div>
+    <div id="results" class="container d-flex">
+    </div>
+<div class="jumbotron mt-5 bg-danger">
+    <div class="container d-flex">
+        <div class="container justify-content-center">
+    <a href='../../../pay/confirmation'><button class='btn btn-success col-12' type="button" name="button">Chequeout</button></a>
+        </div>
+    </div>
+</div>
+    <script>
+        
+        function addCards(card_data) {
+            var element = document.getElementById("results")
+            element.innerHTML = card_data;
+        }
+
+        function htmlDecode(input){
+            var e = document.createElement('div');
+          e.innerHTML = input;
+          return e.childNodes[0].nodeValue;
+        }
+
+        var card_data = htmlDecode(`{{ response }}`)
+        addCards(card_data)
+    </script>
+{% endblock%}
